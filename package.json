@@ -16,8 +16,16 @@
   "contributes": {
     "commands": [
       {
-        "command": "helloworld.helloWorld",
-        "title": "Hello World"
+        "command": "vam.vam",
+        "title": "vam"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vam.vam",
+        "key": "cmd+u",
+        "mac": "cmd+u",
+        "when": "editorTextFocus"
       }
     ]
   },
