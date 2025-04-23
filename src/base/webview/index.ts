@@ -119,10 +119,10 @@ export class Webview extends BaseModule implements vscode.WebviewViewProvider {
         <script>window.ide = "vscode"</script>
         <script>window.colorThemeName = "dark"</script>
         <script nonce="${nonce}" src="${jsUrl}"></script>
-        <title>Continue</title>
+        <title>Vam</title>
       </head>
       <body ${!isLight ? "class='dark'" : ""}>
-        <div id="root"></div>
+        <div id="root" style="background-color: var(--vscode-sideBar-background);"></div>
         ${inDevelopmentMode
                 ? `<script type="module">
           import RefreshRuntime from "http://localhost:5173/@react-refresh"
