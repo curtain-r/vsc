@@ -2,8 +2,9 @@ import { BaseModule } from "@/base";
 import { ContextManager } from "@/base/ctx";
 import * as vscode from "vscode";
 import { getNonce } from "@/utils";
+import { BridgeModule } from "@/base/bridge";
 
-export class Webview extends BaseModule implements vscode.WebviewViewProvider {
+export class WebViewModule extends BaseModule implements vscode.WebviewViewProvider {
     _view?: vscode.WebviewView;
     public provider?: vscode.Disposable;
 
@@ -33,6 +34,7 @@ export class Webview extends BaseModule implements vscode.WebviewViewProvider {
             view.webview,
             this.context.extensionUri,
         );
+        this.bridge.startupDataPipe();
     }
 
     public revive(panel: vscode.WebviewView) {
@@ -140,6 +142,10 @@ export class Webview extends BaseModule implements vscode.WebviewViewProvider {
         <script type="module" nonce="${nonce}" src="${scriptUri}"></script>
       </body>
     </html>`;
+    }
+
+    private get bridge() {
+        return this.getBase(BridgeModule);
     }
 
 }

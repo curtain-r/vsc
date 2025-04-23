@@ -54,11 +54,13 @@
     "check-types": "tsc --noEmit",
     "lint": "eslint src --ext ts",
     "lint:fix": "eslint src --ext ts --fix",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "webview:dev": "cd webview-ui && pnpm dev"
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.6",
+    "@types/mocha": "^10.0.10",
     "@types/node": "18.x",
+    "@types/react": "^19.0.10",
     "@types/vscode": "^1.90.0",
     "@typescript-eslint/eslint-plugin": "^7.11.0",
     "@typescript-eslint/parser": "^7.11.0",
@@ -71,6 +73,7 @@
   },
   "dependencies": {
     "it-pipe": "^3.0.1",
+    "rxjs": "^7.8.1",
     "stream-to-it": "^1.0.1"
   }
 }
