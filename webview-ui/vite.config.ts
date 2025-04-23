@@ -8,8 +8,7 @@ export default defineConfig({
   server: {
     cors: true,
     headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Content-Type': 'application/javascript; charset=utf-8'
+      'Access-Control-Allow-Origin': '*'
     },
     middlewareMode: false,
     fs: {
