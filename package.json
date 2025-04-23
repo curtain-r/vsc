@@ -14,20 +14,16 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "vam.vam",
-        "title": "vam"
-      }
-    ],
-    "keybindings": [
-      {
-        "command": "vam.vam",
-        "key": "cmd+u",
-        "mac": "cmd+u",
-        "when": "editorTextFocus"
-      }
-    ]
+    "commands": [{
+      "command": "vam.vam",
+      "title": "vam"
+    }],
+    "keybindings": [{
+      "command": "vam.vam",
+      "key": "cmd+u",
+      "mac": "cmd+u",
+      "when": "editorTextFocus"
+    }]
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
@@ -41,6 +37,7 @@
     "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
     "check-types": "tsc --noEmit",
     "lint": "eslint src --ext ts",
+    "lint:fix": "eslint src --ext ts --fix",
     "test": "vscode-test"
   },
   "devDependencies": {
