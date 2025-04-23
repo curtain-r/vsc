@@ -1,7 +1,7 @@
 {
-  "name": "helloworld",
-  "displayName": "HelloWorld",
-  "description": "LEAVE BLANK",
+  "name": "case-assistant",
+  "displayName": "Case Assistant",
+  "description": "Case Assistant",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.90.0"

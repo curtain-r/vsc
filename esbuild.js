@@ -1,4 +1,5 @@
 const esbuild = require("esbuild");
+const path = require("path");
 
 const production = process.argv.includes('--production');
 const watch = process.argv.includes('--watch');
@@ -41,6 +42,9 @@ async function main() {
 			/* add to the end of plugins array */
 			esbuildProblemMatcherPlugin,
 		],
+		alias: {
+			'@': path.resolve(__dirname, 'src')
+		},
 	});
 	if (watch) {
 		await ctx.watch();
