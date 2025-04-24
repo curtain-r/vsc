@@ -14,7 +14,8 @@ export default defineConfig({
     fs: {
       strict: false,
       allow: ['..']
-    }
+    },
+    port: 3000
   },
   optimizeDeps: {
     esbuildOptions: {

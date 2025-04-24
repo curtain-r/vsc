@@ -104,8 +104,8 @@ export class WebViewModule extends BaseModule implements vscode.WebviewViewProvi
                 .toString();
         }
         else {
-            scriptUri = "http://localhost:5173/src/main.tsx";
-            styleMainUri = "http://localhost:5173/src/App.css";
+            scriptUri = "http://localhost:3000/src/main.tsx";
+            styleMainUri = "http://localhost:3000/src/App.css";
         }
         const nonce = getNonce();
         const currentTheme = vscode.window.activeColorTheme;
@@ -127,14 +127,14 @@ export class WebViewModule extends BaseModule implements vscode.WebviewViewProvi
         <div id="root" style="background-color: var(--vscode-sideBar-background);"></div>
         ${inDevelopmentMode
                 ? `<script type="module">
-          import RefreshRuntime from "http://localhost:5173/@react-refresh"
+          import RefreshRuntime from "http://localhost:3000/@react-refresh"
           RefreshRuntime.injectIntoGlobalHook(window)
           window.$RefreshReg$ = () => {}
           window.$RefreshSig$ = () => (type) => type
           window.__vite_plugin_react_preamble_installed__ = true
           </script>
           <script type="module">
-            import { createHotContext } from "http://localhost:5173/@vite/client"
+            import { createHotContext } from "http://localhost:3000/@vite/client"
             window.__vite_hot_context__ = createHotContext()
           </script>`
                 : ""
