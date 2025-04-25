@@ -15,7 +15,7 @@ export default defineConfig({
       strict: false,
       allow: ['..']
     },
-    port: 3000
+    port: 3001
   },
   optimizeDeps: {
     esbuildOptions: {
